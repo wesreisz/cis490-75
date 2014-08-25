@@ -4,6 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 
 public class MyActivity extends Activity {
@@ -32,5 +36,10 @@ public class MyActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void changeImage(View view) {
+        ImageView imageView = (ImageView) findViewById(R.id.imgCards);
+        imageView.setImageResource(R.drawable.miami);
     }
 }
