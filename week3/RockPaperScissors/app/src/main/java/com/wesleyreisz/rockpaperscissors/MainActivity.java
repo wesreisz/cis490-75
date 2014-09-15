@@ -55,11 +55,5 @@ public class MainActivity extends Activity implements View.OnClickListener{
         Intent intent = new Intent(this,WinLoseActivity.class);
         intent.putExtra(RockPaperScissorsUtil.INPUT_TYPE,view.getId());
         startActivity(intent);
-
-        /*
-
-        Toast toast = Toast.makeText(view.getContext(), text + " Clicked",Toast.LENGTH_SHORT);
-        toast.show();
-        */
     }
 }

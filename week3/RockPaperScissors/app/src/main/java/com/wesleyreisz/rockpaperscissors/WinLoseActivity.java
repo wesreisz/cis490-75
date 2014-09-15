@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -31,9 +34,28 @@ public class WinLoseActivity extends Activity {
         RockPaperScissorsAI player2 = new RockPaperScissorsAI();
         RockPaperScissorType player2Choice = player2.play();
 
+        //set picture
+        ImageView imageComputer = (ImageView)findViewById(R.id.imageComputer);
+        if(player2Choice==RockPaperScissorType.ROCK){
+            imageComputer.setImageResource(R.drawable.rock);
+        }else if(player2Choice==RockPaperScissorType.PAPER){
+            imageComputer.setImageResource(R.drawable.paper);
+        }else if(player2Choice==RockPaperScissorType.SCISSORS){
+            imageComputer.setImageResource(R.drawable.scissors);
+        }
+
+        //set result
         String result = RockPaperScissorsUtil.eval(player1Choice,player2Choice);
         TextView textView = (TextView)findViewById(R.id.textResult);
-        textView.setText("Computer plays " + player2Choice.getValue() + " " + result);
+        textView.setText(result);
+
+        Button button = (Button) findViewById(R.id.btnAgain);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                WinLoseActivity.this.finish();
+            }
+        });
     }
 
 
