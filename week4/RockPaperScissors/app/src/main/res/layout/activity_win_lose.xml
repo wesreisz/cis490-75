@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.wesleyreisz.rockpaperscissors.WinLoseActivity"
+    android:background="@drawable/bg"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Computer Plays:"
+        android:textSize="30dip"
+        android:gravity="center"
+        android:id="@+id/simpleText"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageComputer"
+        android:gravity="center"
+        android:layout_below="@+id/simpleText"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textResult"
+        android:textSize="45dip"
+        android:gravity="center"
+        android:layout_below="@+id/imageComputer"
+        android:paddingTop="20dip"
+        android:textColor="@android:color/holo_red_dark"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAgain"
+        android:text="@string/play_again"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
