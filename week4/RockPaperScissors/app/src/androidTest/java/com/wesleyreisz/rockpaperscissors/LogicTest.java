@@ -23,16 +23,16 @@ public class LogicTest extends TestCase {
     }
 
     public void testResultMap(){
-        Assert.assertEquals("Computer Wins", RockPaperScissorsUtil.eval(RockPaperScissorType.ROCK,RockPaperScissorType.PAPER));
-        Assert.assertEquals("Tie", RockPaperScissorsUtil.eval(RockPaperScissorType.ROCK,RockPaperScissorType.ROCK));
-        Assert.assertEquals("Player 1 Wins", RockPaperScissorsUtil.eval(RockPaperScissorType.ROCK,RockPaperScissorType.SCISSORS));
+        Assert.assertEquals(RockPaperScissorsConstants.COMPUTER_WINS, RockPaperScissorsUtil.eval(RockPaperScissorType.ROCK,RockPaperScissorType.PAPER));
+        Assert.assertEquals(RockPaperScissorsConstants.TIE, RockPaperScissorsUtil.eval(RockPaperScissorType.ROCK,RockPaperScissorType.ROCK));
+        Assert.assertEquals(RockPaperScissorsConstants.PLAYER_WINS, RockPaperScissorsUtil.eval(RockPaperScissorType.ROCK,RockPaperScissorType.SCISSORS));
 
-        Assert.assertEquals("Player 1 Wins", RockPaperScissorsUtil.eval(RockPaperScissorType.PAPER,RockPaperScissorType.ROCK));
-        Assert.assertEquals("Tie", RockPaperScissorsUtil.eval(RockPaperScissorType.PAPER,RockPaperScissorType.PAPER));
-        Assert.assertEquals("Computer Wins", RockPaperScissorsUtil.eval(RockPaperScissorType.PAPER,RockPaperScissorType.SCISSORS));
+        Assert.assertEquals(RockPaperScissorsConstants.PLAYER_WINS, RockPaperScissorsUtil.eval(RockPaperScissorType.PAPER,RockPaperScissorType.ROCK));
+        Assert.assertEquals(RockPaperScissorsConstants.TIE, RockPaperScissorsUtil.eval(RockPaperScissorType.PAPER,RockPaperScissorType.PAPER));
+        Assert.assertEquals(RockPaperScissorsConstants.COMPUTER_WINS, RockPaperScissorsUtil.eval(RockPaperScissorType.PAPER,RockPaperScissorType.SCISSORS));
 
-        Assert.assertEquals("Computer Wins", RockPaperScissorsUtil.eval(RockPaperScissorType.SCISSORS,RockPaperScissorType.ROCK));
-        Assert.assertEquals("Player 1 Wins", RockPaperScissorsUtil.eval(RockPaperScissorType.SCISSORS,RockPaperScissorType.PAPER));
-        Assert.assertEquals("Tie", RockPaperScissorsUtil.eval(RockPaperScissorType.SCISSORS,RockPaperScissorType.SCISSORS));
+        Assert.assertEquals(RockPaperScissorsConstants.COMPUTER_WINS, RockPaperScissorsUtil.eval(RockPaperScissorType.SCISSORS,RockPaperScissorType.ROCK));
+        Assert.assertEquals(RockPaperScissorsConstants.PLAYER_WINS, RockPaperScissorsUtil.eval(RockPaperScissorType.SCISSORS,RockPaperScissorType.PAPER));
+        Assert.assertEquals(RockPaperScissorsConstants.TIE, RockPaperScissorsUtil.eval(RockPaperScissorType.SCISSORS,RockPaperScissorType.SCISSORS));
     }
 }
