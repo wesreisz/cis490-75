@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Computer Plays:"
-        android:textSize="30sp"
+        android:textSize="90sp"
         android:gravity="center"
         android:id="@+id/simpleText"
         />
@@ -30,11 +30,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/imageResult"
-        android:layout_below="@+id/imageComputer"
-        android:layout_centerHorizontal="true"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
+        android:textSize="45dp"
+        android:gravity="center"
+        android:layout_below="@id/imageComputer"
+        android:layout_centerInParent="true"
         android:paddingBottom="80dp"
+        android:paddingLeft="90dp"
         android:src="@drawable/win"
         />
 
@@ -44,8 +45,8 @@
         android:id="@+id/btnAgain"
         android:text="@string/play_again"
         android:layout_alignParentBottom="true"
-        android:textColor="@android:color/white"
         android:background="@drawable/button"
+        android:textColor="@android:color/white"
         />
 
 </RelativeLayout>

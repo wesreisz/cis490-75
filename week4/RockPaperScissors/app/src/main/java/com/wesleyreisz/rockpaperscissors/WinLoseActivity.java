@@ -46,8 +46,14 @@ public class WinLoseActivity extends Activity {
 
         //set result
         String result = RockPaperScissorsUtil.eval(player1Choice,player2Choice);
-        TextView textView = (TextView)findViewById(R.id.textResult);
-        textView.setText(result);
+        ImageView resultImage = (ImageView)findViewById(R.id.imageResult);
+        if(RockPaperScissorsConstants.PLAYER_WINS.equalsIgnoreCase(result)){
+            resultImage.setImageResource(R.drawable.win);
+        }else if(RockPaperScissorsConstants.COMPUTER_WINS.equalsIgnoreCase(result)){
+            resultImage.setImageResource(R.drawable.lose);
+        }else{
+            resultImage.setImageResource(R.drawable.tie);
+        }
 
         Button button = (Button) findViewById(R.id.btnAgain);
         button.setOnClickListener(new View.OnClickListener() {
@@ -58,26 +64,4 @@ public class WinLoseActivity extends Activity {
         });
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.win_lose, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

@@ -11,18 +11,20 @@
     >
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Computer Plays:"
         android:textSize="30sp"
+        android:paddingLeft="50dp"
         android:gravity="center"
         android:id="@+id/simpleText"
         />
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageComputer"
         android:gravity="center"
+        android:paddingLeft="100dp"
         android:layout_below="@+id/simpleText"
         android:src="@drawable/rock"
         />
@@ -30,8 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/imageResult"
-        android:layout_below="@+id/imageComputer"
-        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/imageComputer"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         android:paddingBottom="80dp"
@@ -44,8 +45,8 @@
         android:id="@+id/btnAgain"
         android:text="@string/play_again"
         android:layout_alignParentBottom="true"
-        android:textColor="@android:color/white"
         android:background="@drawable/button"
+        android:textColor="@android:color/white"
         />
 
 </RelativeLayout>
