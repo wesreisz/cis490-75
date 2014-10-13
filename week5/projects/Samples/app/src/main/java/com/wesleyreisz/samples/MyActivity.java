@@ -1,6 +1,8 @@
 package com.wesleyreisz.samples;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,10 +24,13 @@ public class MyActivity extends Activity{
             @Override
             public void onClick(View view) {
                 EditText editText = (EditText)findViewById(R.id.txtSamples);
-                // Anonymous inner classes have a reference to the instance of the class
-                // they are created in.
-                Toast toast = Toast.makeText(MyActivity.this,editText.getText(),Toast.LENGTH_SHORT);
-                toast.show();
+
+                //send sms
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_VIEW);
+                sendIntent.setData(Uri.parse("sms:" + editText.getText()));
+                sendIntent.putExtra("sms_body", "hello bra");
+                startActivity(sendIntent);
             }
         });
     }
