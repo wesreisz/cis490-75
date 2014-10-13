@@ -4,14 +4,30 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
-public class MyActivity extends Activity {
+public class MyActivity extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
+
+        Button button = (Button)findViewById(R.id.btnClicker);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText editText = (EditText)findViewById(R.id.txtSamples);
+                // Anonymous inner classes have a reference to the instance of the class
+                // they are created in.
+                Toast toast = Toast.makeText(MyActivity.this,editText.getText(),Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
     }
 
 

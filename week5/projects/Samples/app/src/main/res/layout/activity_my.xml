@@ -25,6 +25,7 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="20dip"
         android:padding="15sp"
+        android:id="@+id/btnClicker"
         />
 
 </RelativeLayout>
