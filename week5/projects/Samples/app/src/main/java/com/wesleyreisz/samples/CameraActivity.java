@@ -2,16 +2,21 @@ package com.wesleyreisz.samples;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 
 public class CameraActivity extends Activity {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
+    private ImageView mImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,17 @@ public class CameraActivity extends Activity {
                 dispatchTakePictureIntent();
             }
         });
+
+        mImageView = (ImageView)findViewById(R.id.imgPicture);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            mImageView.setImageBitmap(imageBitmap);
+        }
     }
 
     private void dispatchTakePictureIntent() {

@@ -12,9 +12,11 @@
         android:layout_width="350dp"
         android:layout_height="350dp"
         android:layout_centerHorizontal="true"
-        android:padding="30dp"
+        android:padding="1dp"
         android:id="@+id/imgPicture"
         android:background="@android:color/darker_gray"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
         />
     <Button
         android:layout_width="wrap_content"
