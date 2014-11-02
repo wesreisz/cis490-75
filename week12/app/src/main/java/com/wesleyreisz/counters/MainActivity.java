@@ -78,4 +78,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     }
 
+    class CounterHandler extends Handler{
+        public void setCounter(String counterText){
+            mTxtView.setText(counterText);
+        }
+    }
 }
