@@ -5,6 +5,7 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 import android.os.Build;
 
 import com.wesleyreisz.sampleactionbarapp.fragment.AddFragment;
+import com.wesleyreisz.sampleactionbarapp.fragment.AnnnnnnotherFragment;
 import com.wesleyreisz.sampleactionbarapp.fragment.PlaceholderFragment;
 import com.wesleyreisz.sampleactionbarapp.fragment.SearchFragment;
 import com.wesleyreisz.sampleactionbarapp.fragment.SimpleTextFragment;
@@ -22,7 +24,9 @@ import com.wesleyreisz.sampleactionbarapp.fragment.WiiidgetFragment;
 import com.wesleyreisz.sampleactionbarapp.listener.MyTabListener;
 
 
-public class MainTabActivity extends Activity implements WiiidgetFragment.OnFragmentInteractionListener {
+public class MainTabActivity extends Activity implements
+        WiiidgetFragment.OnFragmentInteractionListener,
+        AnnnnnnotherFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,7 @@ public class MainTabActivity extends Activity implements WiiidgetFragment.OnFrag
 
         ActionBar.Tab tab4 = actionbar.newTab().setText(R.string.tab4);
         tab4.setTabListener(new MyTabListener(new SimpleTextFragment()));
+
 
         actionbar.addTab(tab2);
         actionbar.addTab(tab3);
@@ -80,6 +85,11 @@ public class MainTabActivity extends Activity implements WiiidgetFragment.OnFrag
 
     @Override
     public void onFragmentInteraction(String txt) {
+
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
 
     }
 
