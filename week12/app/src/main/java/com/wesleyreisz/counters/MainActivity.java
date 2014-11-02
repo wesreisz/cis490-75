@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import android.os.Handler;
 
+import com.wesleyreisz.counters.util.CounterConstants;
+import com.wesleyreisz.counters.util.HttpUtil;
+
 public class MainActivity extends Activity implements View.OnClickListener {
     private int threadsCount=0;
     private TextView mTxtView;
@@ -55,16 +58,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        //mTextMessage.setText("Started...");
         new Thread(new MyCounter(++threadsCount)).start();
-        //mTextMessage.setText("Finished...");
     }
 
     class CounterHandler extends Handler{
-        public void setCounter(final String counterText){
+        public void setSong(final String songs){
             runOnUiThread( new Runnable() {
                 public void run() {
-                    mTxtView.setText(counterText);
+                    mTxtView.setText(songs);
                 }
             });
         }
@@ -84,25 +85,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
         @Override
         public void run() {
-            int seconds = 0;
             mHandler.setMessage("Started: " + localCount + "!");
-            while(seconds<20){
-                try {
-                    seconds++;
-                    Thread.sleep(1000);
-                    String stringMessage = "Counter: " + seconds;
-                    mHandler.setCounter(stringMessage);
-                    Log.d("Counter", stringMessage);
-
-                    if(seconds%10==0){
-                        mHandler.setMessage(
-                            "Multiple of 10: " + seconds + " on thread #: " +localCount
-                        );
-                    }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
+            Log.d("Counter", "Started fetch for songs");
+            String results = HttpUtil.getJson(CounterConstants.HTTPS_ITUNES_APPLE_COM_US_RSS_TOPSONGS);
+            Log.d("Counter", "Got Songs: " + results);
+            mHandler.setSong(results);
             mHandler.setMessage("Finished: " + localCount + "!");
         }
     }
