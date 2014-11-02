@@ -7,17 +7,18 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+
 import android.os.Handler;
 
+public class MainActivity extends Activity implements View.OnClickListener {
+    private TextView mTxtView;
 
-
-public class MainActivity extends Activity {
-    private TextView mCount;
-
-    final Handler countHandler = new Handler(){
-        public void handleMessage(Message msg){
-            mCount.setText((String)msg.obj);
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            mTxtView.setText((String)msg.obj);
         }
     };
 
@@ -25,33 +26,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mCount = (TextView)findViewById(R.id.count);
-        mCount.setText("0");
-        count();
-    }
-
-    private void count() {
-        new Thread(new Runnable() {
-            int seconds = 0;
-            @Override
-            public void run() {
-                while(true){
-                    try {
-                        Thread.sleep(1000);
-                        seconds++;
-
-                        Message msg = Message.obtain();
-                        msg.obj = seconds + "";
-                        countHandler.sendMessage(msg);
-
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                        Log.w("COUNTER", e);
-                    }
-
-                }
-            }
-        }).start();
+        mTxtView = (TextView)findViewById(R.id.txtView);
+        Button btnStart = (Button)findViewById(R.id.btnStart);
+        btnStart.setOnClickListener(this);
     }
 
     @Override
@@ -76,7 +53,29 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void reset(View view) {
-        count();
+    @Override
+    public void onClick(View v) {
+       new Thread(new MyCounter()).start();
     }
+
+    class MyCounter implements Runnable {
+        @Override
+        public void run() {
+            int seconds = 0;
+            while(seconds<20){
+                try {
+                    seconds++;
+                    Thread.sleep(1000);
+                    String stringMessage = "Counter: " + seconds;
+                    Message msg = Message.obtain();
+                    msg.obj = stringMessage;
+                    handler.sendMessage(msg);
+                    Log.d("Counter", stringMessage);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
 }
