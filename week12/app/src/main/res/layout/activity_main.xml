@@ -13,6 +13,15 @@
         android:gravity="center"
         android:id="@+id/txtView"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/txtMessage"
+        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
