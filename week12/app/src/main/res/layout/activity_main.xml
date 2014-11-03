@@ -5,14 +5,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="Click to Start Counter..."
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:id="@+id/txtView"
-        />
+        android:id="@+id/listViewSongs"
+        >
+        </ListView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,17 +19,6 @@
         android:gravity="center"
         android:layout_alignParentBottom="true"
         android:id="@+id/txtMessage"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/txtView"
-        android:textSize="40sp"
-        android:padding="15dp"
-        android:layout_margin="30dp"
-        android:id="@+id/btnStart"
         />
 
 </RelativeLayout>

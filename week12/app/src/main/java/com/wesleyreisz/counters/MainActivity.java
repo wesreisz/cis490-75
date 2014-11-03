@@ -2,22 +2,24 @@ package com.wesleyreisz.counters;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import android.os.Handler;
 
+import com.wesleyreisz.counters.model.Song;
 import com.wesleyreisz.counters.util.CounterConstants;
 import com.wesleyreisz.counters.util.HttpUtil;
+import com.wesleyreisz.counters.util.SongUtil;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+import java.util.List;
+
+public class MainActivity extends Activity{
     private int threadsCount=0;
-    private TextView mTxtView;
+    private ListView mSongListView;
     private TextView mTextMessage;
     private CounterHandler mHandler;
 
@@ -25,13 +27,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mTxtView = (TextView)findViewById(R.id.txtView);
+        mSongListView = (ListView)findViewById(R.id.listViewSongs);
         mTextMessage = (TextView)findViewById(R.id.txtMessage);
-
-        Button btnStart = (Button)findViewById(R.id.btnStart);
-        btnStart.setOnClickListener(this);
-
         mHandler = new CounterHandler();
+        new Thread(new MyCounter(++threadsCount)).start();
     }
 
     @Override
@@ -56,16 +55,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onClick(View v) {
-        new Thread(new MyCounter(++threadsCount)).start();
-    }
-
     class CounterHandler extends Handler{
         public void setSong(final String songs){
             runOnUiThread( new Runnable() {
                 public void run() {
-                    mTxtView.setText(songs);
+                    List<Song> songList = SongUtil.mapSongs(songs);
+
                 }
             });
         }
