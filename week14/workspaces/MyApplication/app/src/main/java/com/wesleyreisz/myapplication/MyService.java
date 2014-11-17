@@ -1,6 +1,7 @@
 package com.wesleyreisz.myapplication;
 
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
@@ -61,9 +62,20 @@ public class MyService extends Service {
             NotificationCompat.Builder mBuilder =
                     new NotificationCompat.Builder(getApplicationContext());
 
+
+            PendingIntent resultPendingIntent =
+                PendingIntent.getActivity(
+                    getApplicationContext(),
+                    0,
+                    new Intent(getApplicationContext(), MainActivity.class),
+                    PendingIntent.FLAG_UPDATE_CURRENT
+                );
+
+
             mBuilder.setSmallIcon(android.R.drawable.ic_dialog_alert);
             mBuilder.setContentTitle(mMessage + " Notification " + count);
             mBuilder.setContentText(mMessage + ": " + count);
+            mBuilder.setContentIntent(resultPendingIntent);
 
             //send it
             notificationManager.notify(
