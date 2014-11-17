@@ -1,13 +1,16 @@
 package com.wesleyreisz.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener{
     private MyApplication myApplication;
 
     @Override
@@ -19,6 +22,12 @@ public class MainActivity extends Activity {
 
         TextView textView = (TextView)findViewById(R.id.textviewMessage);
         textView.setText(myApplication.getMessage());
+
+        Button buttonStartService = (Button)findViewById(R.id.buttonStartService);
+        buttonStartService.setOnClickListener(this);
+
+        Button buttonStopService = (Button)findViewById(R.id.buttonStopService);
+        buttonStopService.setOnClickListener(this);
     }
 
 
@@ -39,8 +48,33 @@ public class MainActivity extends Activity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }else if (id == R.id.start_service) {
+            startService();
+            return true;
+        }else if (id == R.id.stop_service) {
+            stopService();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void stopService() {
+        Intent intent = new Intent(this, MyService.class);
+        stopService(intent);
+    }
+
+    private void startService() {
+        Intent intent = new Intent(this, MyService.class);
+        startService(intent);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId()==R.id.buttonStartService){
+            startService();
+        }else if(v.getId()==R.id.buttonStopService){
+            stopService();
+        }
     }
 }
