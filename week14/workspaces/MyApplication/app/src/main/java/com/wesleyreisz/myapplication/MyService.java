@@ -18,15 +18,7 @@ public class MyService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d("TEST","Started Service");
 
-        int count = 0;
-        while(count<=10){
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            Log.d("TEST"," Message: " + ++count);
-        }
+        new Thread(new CounterRunnable()).start();
 
         return START_STICKY;
     }
@@ -35,5 +27,20 @@ public class MyService extends Service {
     public void onDestroy() {
         Log.d("TEST","Stopped Service");
         super.onDestroy();
+    }
+
+    private class CounterRunnable implements Runnable{
+        @Override
+        public void run() {
+            int count = 0;
+            while(count<=10){
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Log.d("TEST"," Message: " + ++count);
+            }
+        }
     }
 }
