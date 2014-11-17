@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends Activity implements View.OnClickListener{
+    public static final String MESSAGE = "Message";
     private MyApplication myApplication;
 
     @Override
@@ -66,6 +67,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
     private void startService() {
         Intent intent = new Intent(this, MyService.class);
+        intent.putExtra(MESSAGE, "This is my message");
         startService(intent);
     }
 

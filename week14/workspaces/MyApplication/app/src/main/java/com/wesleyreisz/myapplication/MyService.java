@@ -3,6 +3,7 @@ package com.wesleyreisz.myapplication;
 import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
@@ -20,7 +21,10 @@ public class MyService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d("TEST","Started Service");
 
-        new Thread(new CounterRunnable()).start();
+        Bundle bundle = intent.getExtras();
+        String message = (String)bundle.get(MainActivity.MESSAGE);
+
+        new Thread(new CounterRunnable(message)).start();
 
         return START_STICKY;
     }
@@ -32,6 +36,10 @@ public class MyService extends Service {
     }
 
     private class CounterRunnable implements Runnable{
+        String mMessage;
+        public CounterRunnable(String message){
+            this.mMessage = message;
+        }
         @Override
         public void run() {
             int count = 0;
@@ -42,7 +50,7 @@ public class MyService extends Service {
 
             while(count<=5){
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -54,8 +62,8 @@ public class MyService extends Service {
                     new NotificationCompat.Builder(getApplicationContext());
 
             mBuilder.setSmallIcon(android.R.drawable.ic_dialog_alert);
-            mBuilder.setContentTitle("Notification " + count);
-            mBuilder.setContentText(" " + count);
+            mBuilder.setContentTitle(mMessage + " Notification " + count);
+            mBuilder.setContentText(mMessage + ": " + count);
 
             //send it
             notificationManager.notify(
