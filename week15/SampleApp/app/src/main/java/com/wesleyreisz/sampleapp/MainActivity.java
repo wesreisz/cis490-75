@@ -1,45 +1,30 @@
 package com.wesleyreisz.sampleapp;
 
 import android.app.Activity;
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.ToggleButton;
+import android.widget.Button;
 
 
 public class MainActivity extends Activity {
-    private boolean mSilentMode = true;
-    public static final String PREFS_NAME = "com.wesleyreisz.sampleapp.MyPrefsFile";
-    public static final String TAG = "SILENT";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Restore preferences
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        boolean silent = settings.getBoolean("silentMode", false);
-        setSilent(silent);
-
-        ToggleButton toggleButton = (ToggleButton)findViewById(R.id.togglebutton);
-        toggleButton.setChecked(mSilentMode);
-
-        Log.d(TAG, "Loading mSilentMode: " + mSilentMode);
+        Button button = (Button)findViewById(R.id.buttonOpenSharedPreferences);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), SharedPreferenceActivity.class));
+            }
+        });
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d(TAG, "Starting mSilentMode: " + mSilentMode);
-
-        TextView textViewValue = (TextView)findViewById(R.id.textViewValue);
-        textViewValue.setText(String.valueOf(mSilentMode));
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -61,35 +46,5 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("silentMode", mSilentMode);
-
-        // Commit the edits!
-        editor.commit();
-
-        Log.d(TAG, "Calling Stop and persisting mSilentMode: " + mSilentMode);
-    }
-
-    public void onToggleClicked(View view) {
-        // Is the toggle on?
-        boolean on = ((ToggleButton) view).isChecked();
-
-        if (on) {
-            setSilent(true);
-        } else {
-            setSilent(false);
-        }
-        Log.d(TAG, "Setting Mode to: " + mSilentMode);
-    }
-
-    public void setSilent(boolean silent) {
-        this.mSilentMode = silent;
     }
 }
