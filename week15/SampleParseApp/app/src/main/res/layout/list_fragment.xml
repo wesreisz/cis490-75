@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <!-- 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:gravity="left|center_vertical"
+        android:text="@string/layout1"
+        android:textColor="#000000" />
+    -->
+    <ListView
+        android:id="@+id/listViewMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:padding="10dp"
+        >
+    </ListView>
+
+</LinearLayout>

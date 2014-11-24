@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" 
+    android:padding="15dp"
+    android:paddingTop="30dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CIS490 Music List"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20dip"
+        android:textColor="#686868" />
+     
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a menu above here"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12dip"
+        android:textStyle="italic"
+        android:textColor="#686868" />
+    
+</LinearLayout>

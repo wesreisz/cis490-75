@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+   <item android:id="@+id/menuAdd"
+       android:icon="@android:drawable/ic_input_add"
+       android:title="Add"
+       android:showAsAction="always"
+       android:onClick="onOption1Clicked"
+       android:visible="false"
+       />
+   <item android:id="@+id/menuRefresh"
+       android:icon="@drawable/ic_menu_refresh"
+       android:title="Refresh"
+       android:showAsAction="ifRoom"
+       android:onClick="refreshData"
+       />
+   <item android:id="@+id/menuExit"
+       android:icon="@android:drawable/ic_lock_power_off"
+       android:title="Exit"
+       android:showAsAction="ifRoom"
+       android:onClick="onExitClicked"
+       />
+
+</menu>
