@@ -42,6 +42,20 @@ public class SharedPreferenceActivity extends Activity {
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean("silentMode", mSilentMode);
+
+        // Commit the edits!
+        editor.commit();
+
+        Log.d(TAG, "Calling Stop and persisting mSilentMode: " + mSilentMode);
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -63,19 +77,7 @@ public class SharedPreferenceActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
 
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("silentMode", mSilentMode);
-
-        // Commit the edits!
-        editor.commit();
-
-        Log.d(TAG, "Calling Stop and persisting mSilentMode: " + mSilentMode);
-    }
 
     public void onToggleClicked(View view) {
         // Is the toggle on?
