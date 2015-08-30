@@ -5,8 +5,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+    private static String TAG = "hello world";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //TODO: Modify code 1. Don't change anything above right now.
-
-        Log.d("Hello_Java", "This is a test");
 
         //Don't change anything between here and the next fine
 
@@ -27,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Don't change anything below right now.
+
+
+    public void runButtons(View view) {
+        Log.d(TAG,"Running the Buttons");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
