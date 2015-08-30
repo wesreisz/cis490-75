@@ -17,21 +17,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //TODO: Modify code 1. Don't change anything above right now.
-
-        //Don't change anything between here and the next fine
-
-
     }
 
-
-    //TODO: Modify code 2. Don't change anything above right now.
-
-
-    //Don't change anything below right now.
-
-
+    //making changes here
     public void runButtons(View view) {
         Log.d(TAG,"Running the Buttons");
     }
