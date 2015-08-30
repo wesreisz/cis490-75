@@ -21,7 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
     //making changes here
     public void runButtons(View view) {
-        Log.d(TAG,"Running the Buttons");
+        if(R.id.btnDog==view.getId()){
+            Log.d(TAG,"Running the Dog Button");
+        }else if(R.id.btnFido==view.getId()){
+            Log.d(TAG,"Running the Fido Button");
+        }else if(R.id.btnCat==view.getId()){
+            Log.d(TAG,"Running the Cat Button");
+        }else{
+            Log.d(TAG,"Running the Buttons");
+        }
     }
 
     @Override
