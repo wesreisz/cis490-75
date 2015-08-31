@@ -1,29 +1,17 @@
-package com.example.wesleyreisz.myapplication;
+package com.example.wesleyreisz.myfirstapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-
-import java.io.FileNotFoundException;
 
 public class MainActivity extends AppCompatActivity {
-    public static String TAG = "hello world";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-    //making changes here
-    public void runButtons(View view) throws FileNotFoundException {
-
-
-    }
-    //don't edit below
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
