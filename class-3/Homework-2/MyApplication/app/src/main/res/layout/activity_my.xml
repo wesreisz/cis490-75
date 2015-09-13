@@ -3,21 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/activity_horizontal_margin"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".MyActivity">
 
-    <EditText
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edtMessage"
-        android:layout_weight="1"
-        android:hint="@string/edit_message_hint"
-        />
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtMessage"
+            android:layout_weight="1"
+            android:hint="@string/edit_message_hint"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_text_send"
+            android:onClick="sendMessage"
+            />
+    </LinearLayout>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_text_send"
-        android:onClick="sendMessage"
-        />
+        android:text="What's up Android?"
+        android:onClick="launchWhatsUp"
+        android:layout_gravity="center_horizontal|center_vertical"
+    />
+
 
 </LinearLayout>
