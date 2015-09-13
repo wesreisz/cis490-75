@@ -2,31 +2,28 @@ package com.example.wesleyreisz.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import java.io.FileNotFoundException;
 
 public class MainActivity extends AppCompatActivity {
+    public static String TAG = "hello world";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
 
-        //TODO: Modify code 1. Don't change anything above right now.
-
-        Log.d("Hello_Java", "This is a test");
-
-        //Don't change anything between here and the next fine
+    //making changes here
+    public void runButtons(View view) throws FileNotFoundException {
 
 
     }
-
-
-    //TODO: Modify code 2. Don't change anything above right now.
-
-
-    //Don't change anything below right now.
+    //don't edit below
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

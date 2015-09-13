@@ -8,6 +8,7 @@ import android.view.View;
 import com.wesleyreisz.core_java_interface_example.animal.Animal;
 import com.wesleyreisz.core_java_interface_example.animal.Cat;
 import com.wesleyreisz.core_java_interface_example.animal.Dog;
+import com.wesleyreisz.core_java_interface_example.animal.Runner;
 import com.wesleyreisz.core_java_interface_example.animal.Snake;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void doExample(View view) {
-        
         Animal animal;
         if(view.getId()==R.id.btnCat){
             //cat
@@ -34,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
         }else if(view.getId()==R.id.btnSnake){
             //snake
             animal = new Snake();
+            //anonymous inner class
+            Runner runner = new Runner() {
+                @Override
+                public String run() {
+                    return "I'm slithering at high speed";
+                }
+            };
+            Log.d(TAG,runner.run());
         }else{
             //animal
             animal = new Animal();

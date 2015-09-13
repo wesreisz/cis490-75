@@ -11,8 +11,139 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35cf66a0-ff83-41d4-92d1-237f83210dd9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/drawable/android.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/gradle/wrapper/gradle-wrapper.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/gradle/wrapper/gradle-wrapper.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/main/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Animal.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/wesleyreisz/core_java_interface_example/ApplicationTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/androidTest/java/com/wesleyreisz/homework_2/ApplicationTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/androidTest/java/com/wesleyreisz/rock_paper_scissors/ApplicationTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Cat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Core-Java-Interface-Example.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/java/com/wesleyreisz/homework_2/DisplayAndroidActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/java/com/wesleyreisz/homework_2/DisplayMessageActivity.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Dog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/MainActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/main/java/com/wesleyreisz/rock_paper_scissors/MainActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/java/com/wesleyreisz/homework_2/MyActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/MyApplication.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/Rock-Paper-Scissors.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Runner.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Snake.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/layout/activity_display_android.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/layout/activity_display_message.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/main/res/layout/activity_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/layout/activity_my.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/app.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/app.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/values/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/values-w820dp/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/main/res/values/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/main/res/values-w820dp/dimens.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/gradle/wrapper/gradle-wrapper.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/gradle/wrapper/gradle-wrapper.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/gradle.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/gradle.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/.idea/gradle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/.idea/gradle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/.idea/gradle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/gradlew.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/gradlew.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/gradlew" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/gradlew" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/menu/menu_display_android.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/menu/menu_display_message.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/main/res/menu/menu_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/menu/menu_my.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/proguard-rules.pro" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/proguard-rules.pro" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/.idea/runConfigurations.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/.idea/runConfigurations.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/.idea/runConfigurations.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/settings.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/settings.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/values/strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/main/res/values/strings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/app/src/main/res/values/styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/app/src/main/res/values/styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework-2/MyApplication/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Rock-Paper-Scissors/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/Animal.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Animal.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Animal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Cat.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Cat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Dog.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Dog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../class-2/MyApplication2/app/src/main/java/com/example/wesleyreisz/myapplication/MainActivity.java" afterPath="$PROJECT_DIR$/../../class-2/MyApplication2/app/src/main/java/com/example/wesleyreisz/myapplication/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Snake.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Snake.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../class-2/MyApplication2/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/../../class-2/MyApplication2/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_2_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../class-2/MyApplication2/.idea/misc.xml" afterPath="$PROJECT_DIR$/../../class-2/MyApplication2/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Core-Java-Interface-Example.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +167,12 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7413793">
-              <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.51194537">
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1203#1372#0" expanded="true" />
+                <element signature="e#1371#1372#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,7 +181,7 @@
       <file leaf-file-name="Snake.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Snake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-1.1111112">
               <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
@@ -79,21 +212,11 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Animal.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
               <folding>
                 <element signature="e#154#155#0" expanded="true" />
-                <element signature="e#204#205#0" expanded="true" />
+                <element signature="e#192#193#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Animal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/Animal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1222,7 +1345,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4326497452000" />
+        <entry key="$PROJECT_DIR$" value="4326509223000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1587,7 +1710,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
@@ -1623,6 +1745,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1654,16 +1778,26 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core-Java-Interface-Example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core-Java-Interface-Example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1689,7 +1823,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1770,10 +1904,13 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1988,32 +2125,32 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22379367" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36688852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2024,10 +2161,38 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/Animal.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1203#1372#0" expanded="true" />
+            <element signature="e#1371#1372#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Snake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Dog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Cat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2035,10 +2200,21 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Animal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
           <folding>
             <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Animal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding>
+            <element signature="e#154#155#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2061,7 +2237,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/animal/Snake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-1.1111112">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
@@ -2069,10 +2245,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/wesleyreisz/core_java_interface_example/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7413793">
-          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.51194537">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1203#1372#0" expanded="true" />
+            <element signature="e#1371#1372#0" expanded="true" />
           </folding>
         </state>
       </provider>
