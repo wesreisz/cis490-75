@@ -34,12 +34,26 @@ public class MainActivity extends AppCompatActivity {
         }else if(view.getId()==R.id.btnSnake){
             //snake
             animal = new Snake();
+
+            //anonymous inner class
+            Runner runner = new Runner() {
+                @Override
+                public String run() {
+                    return "I'm slithering at high speed";
+                }
+            };
+            Log.d(TAG,runner.run());
         }else{
             //animal
             animal = new Animal();
         }
 
         Log.d(TAG, "Animal says: " + animal.speak());
+
+        //calling behavior
+        if(animal instanceof Runner){
+            Log.d(TAG, ((Runner) animal).run());
+        }
 
     }
 }
