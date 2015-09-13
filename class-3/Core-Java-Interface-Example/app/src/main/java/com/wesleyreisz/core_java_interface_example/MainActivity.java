@@ -3,13 +3,13 @@ package com.wesleyreisz.core_java_interface_example;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 
 import com.wesleyreisz.core_java_interface_example.animal.Animal;
 import com.wesleyreisz.core_java_interface_example.animal.Cat;
 import com.wesleyreisz.core_java_interface_example.animal.Dog;
+import com.wesleyreisz.core_java_interface_example.animal.Runner;
+import com.wesleyreisz.core_java_interface_example.animal.Snake;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +34,15 @@ public class MainActivity extends AppCompatActivity {
         }else if(view.getId()==R.id.btnSnake){
             //snake
             animal = new Snake();
+
+            //anonymous inner class
+            Runner runner = new Runner() {
+                @Override
+                public String run() {
+                    return "I'm slithering at high speed";
+                }
+            };
+            Log.d(TAG,runner.run());
         }else{
             //animal
             animal = new Animal();
@@ -41,7 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(TAG, "Animal says: " + animal.speak());
 
-       ;
+        //calling behavior
+        if(animal instanceof Runner){
+            Log.d(TAG, ((Runner) animal).run());
+        }
 
     }
 }
