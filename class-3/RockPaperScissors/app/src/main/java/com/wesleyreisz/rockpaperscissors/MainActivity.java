@@ -1,5 +1,6 @@
 package com.wesleyreisz.rockpaperscissors;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static final String TAG = "Rock, Paper, Scissors";
+    public static final String PLAYER_CHOICE = "com.wesleyreisz.rock_paper_scissors.player_choice";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
         v.startAnimation(animAlpha);
 
-        Log.d(TAG, "This is a click message ");
+        Intent intent = new Intent(this, GameResultActivity.class);
+        intent.putExtra(PLAYER_CHOICE, v.getId());
+        startActivity(intent);
     }
 }
