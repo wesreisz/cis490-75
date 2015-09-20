@@ -4,4 +4,5 @@
     <string name="textview">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="button">Click Me!</string>
+    <string name="hint">Some Text</string>
 </resources>

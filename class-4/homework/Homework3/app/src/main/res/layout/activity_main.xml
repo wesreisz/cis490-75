@@ -13,13 +13,42 @@
         android:layout_marginTop="20dp"
         android:text="@string/textview"
         />
-    <!-- Set OnClickListener to trigger results when pressed -->
-    <Button
-        android:id="@+id/main_button"
+    <!-- Displays keyboard when touched -->
+    <EditText
+        android:id="@+id/main_edittext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:text="@string/button" />
+        android:hint="@string/hint" />
+    <!-- This nested layout contains views of its own -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- Set OnClickListener to trigger results when pressed -->
+        <Button
+            android:id="@+id/main_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/button" />
+        <!-- Shows an image from your drawable resources -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/ic_launcher"  />
+        <!-- Closing tag for the horizontal nested layout -->
+    </LinearLayout>
+    <!-- List whose dataset is defined in code with an adapter -->
+    <ListView
+        android:id="@+id/main_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>
