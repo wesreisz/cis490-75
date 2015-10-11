@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        String name = "WEs";
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        String name = "Reisz";
         Log.d(TAG, "The activity is about to become visible.");
     }
     @Override

@@ -12,7 +12,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
+import android.widget.*;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +25,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener  {
     private static final String PREFS = "prefs";
     private static final String PREF_NAME = "name";
+    public static final String TAG = "omg android";
     SharedPreferences mSharedPreferences;
 
     TextView mainTextView;
@@ -67,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // 7. Greet the user, or ask for their name if new
         displayWelcome();
 
+    }
+
+    private void sort() {
     }
 
     public void displayWelcome() {
@@ -176,6 +180,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         // Log the item's position and contents
         // to the console in Debug
-        Log.d("omg android", position + ": " + mNameList.get(position));
+        Log.d(TAG, position + ": " + mNameList.get(position));
+        Toast toast = Toast.makeText(this,": " + mNameList.get(position),Toast.LENGTH_LONG);
+        toast.show();
     }
 }

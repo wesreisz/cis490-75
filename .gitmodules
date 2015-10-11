@@ -1,0 +1,3 @@
+[submodule "class-5/Rock-Paper-Scissors"]
+	path = class-5/Rock-Paper-Scissors
+	url = https://github.com/wesreisz/Rock-Paper-Scissors.git

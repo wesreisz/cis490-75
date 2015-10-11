@@ -41,6 +41,13 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:src="@mipmap/ic_launcher"  />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/imgContent"
+            android:src="@mipmap/ic_launcher"  />
         <!-- Closing tag for the horizontal nested layout -->
     </LinearLayout>
     <!-- List whose dataset is defined in code with an adapter -->
