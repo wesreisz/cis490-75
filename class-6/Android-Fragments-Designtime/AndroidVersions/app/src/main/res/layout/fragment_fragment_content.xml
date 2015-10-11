@@ -1,0 +1,15 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#899F37"
+    tools:context="com.wesleyreisz.androidversions.FragmentContent">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:padding="10dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Bacon ipsum dolor amet swine tri-tip pastrami, drumstick chicken cow tail alcatra bacon pork belly pork chop shoulder strip steak bresaola. Porchetta tri-tip pancetta pastrami shoulder. Cow salami brisket turkey, chuck andouille shank ball tip strip steak sirloin short loin. Meatball kevin pig short loin doner porchetta." />
+
+</FrameLayout>
