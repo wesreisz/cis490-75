@@ -30,15 +30,11 @@ public class NewListActivityFragment extends Fragment {
 
         ListView listView = (ListView) view.findViewById(R.id.listViewSongs);
         List<Song> songs = new MockMusicService().findAll();
-        ArrayList songNames = new ArrayList();
-        for(Song song : songs){
-            songNames.add(song.getSongTitle());
-        }
 
         // Create an ArrayAdapter for the ListView
-        ArrayAdapter arrayAdapter = new ArrayAdapter(getActivity(),
-                android.R.layout.simple_list_item_1,
-                songNames);
+        SongAdapter arrayAdapter = new SongAdapter(getActivity(),
+                R.layout.layout_for_each_song,
+                songs);
 
         listView.setAdapter(arrayAdapter);
 
