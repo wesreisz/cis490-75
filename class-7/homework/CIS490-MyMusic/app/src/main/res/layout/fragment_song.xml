@@ -1,0 +1,104 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wesleyreisz.mymusic.fragment.SongFragment">
+
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="placholder"
+        android:gravity="center_horizontal"
+        android:paddingTop="40dp"
+        android:id="@+id/txtTitle"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="placholder"
+        android:gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:id="@+id/txtArtist"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Album Name:"
+            android:layout_weight="1"
+            android:paddingRight="10dp"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+        <TextView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="placholder"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:id="@+id/txtAlbumName"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Published Date:"
+            android:layout_weight="1"
+            android:paddingRight="10dp"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+        <TextView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="placholder"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:id="@+id/txtPublishedDate"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp">
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Youtube Video:"
+            android:layout_weight="1"
+            android:paddingRight="10dp"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+        <TextView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="placholder"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:id="@+id/txtYouTubeVideo"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSongList"
+        android:text="Show List"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        />
+
+</LinearLayout>
