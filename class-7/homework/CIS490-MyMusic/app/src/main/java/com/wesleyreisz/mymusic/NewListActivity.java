@@ -1,7 +1,9 @@
 package com.wesleyreisz.mymusic;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.app.Activity;
 import android.widget.Toast;
@@ -13,6 +15,8 @@ import com.wesleyreisz.mymusic.fragment.SongFragment;
 import com.wesleyreisz.mymusic.model.Song;
 import com.wesleyreisz.mymusic.service.MockMusicService;
 
+import java.util.List;
+
 public class NewListActivity extends Activity implements NewListActivityFragment.OnItemChange, SongFragment.OnReloadClick {
 
     @Override
@@ -23,9 +27,10 @@ public class NewListActivity extends Activity implements NewListActivityFragment
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         NewListActivityFragment listFragment = new NewListActivityFragment();
-        fragmentTransaction.add(R.id.fragmentContainer, listFragment);
+        fragmentTransaction.replace(R.id.fragmentContainer, listFragment);
         fragmentTransaction.commit();
     }
+
 
     @Override
     public void ItemClicked(int changeToSongPosition, String songTitle) {
@@ -45,9 +50,12 @@ public class NewListActivity extends Activity implements NewListActivityFragment
     @Override
     public void reload() {
         FragmentManager fragmentManager = getFragmentManager();
+
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
         NewListActivityFragment listFragment = new NewListActivityFragment();
         fragmentTransaction.replace(R.id.fragmentContainer, listFragment);
         fragmentTransaction.commit();
     }
+
 }
