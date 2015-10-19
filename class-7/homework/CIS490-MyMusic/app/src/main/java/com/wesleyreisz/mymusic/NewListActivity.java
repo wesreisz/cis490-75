@@ -17,7 +17,9 @@ import com.wesleyreisz.mymusic.service.MockMusicService;
 
 import java.util.List;
 
-public class NewListActivity extends Activity implements NewListActivityFragment.OnItemChange, SongFragment.OnReloadClick {
+public class NewListActivity extends Activity implements
+        NewListActivityFragment.OnItemChange,
+        SongFragment.OnReloadClick {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,12 @@ public class NewListActivity extends Activity implements NewListActivityFragment
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         SongFragment songFragment = new SongFragment();
         songFragment.setSong(song);
-        fragmentTransaction.replace(R.id.fragmentContainer, songFragment);
+
+        if(findViewById(R.id.fragmentContainerRight)!=null){
+            fragmentTransaction.replace(R.id.fragmentContainerRight, songFragment);
+        }else{
+            fragmentTransaction.replace(R.id.fragmentContainer, songFragment);
+        }
         fragmentTransaction.commit();
     }
 

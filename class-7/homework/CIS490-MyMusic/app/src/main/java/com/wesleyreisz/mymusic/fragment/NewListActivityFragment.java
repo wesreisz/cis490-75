@@ -19,7 +19,7 @@ import java.util.List;
  * A placeholder fragment containing a simple view.
  */
 public class NewListActivityFragment extends Fragment {
-    OnItemChange onItemChange;
+    private OnItemChange onItemChange;
 
     public NewListActivityFragment() {
     }
