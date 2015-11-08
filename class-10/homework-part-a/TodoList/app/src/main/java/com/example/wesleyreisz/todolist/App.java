@@ -12,6 +12,6 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Parse.initialize(this, ApplicationID, ClientKey);
+        Parse.initialize(this);
     }
 }
