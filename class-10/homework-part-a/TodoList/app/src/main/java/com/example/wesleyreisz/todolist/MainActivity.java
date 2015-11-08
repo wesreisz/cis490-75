@@ -1,5 +1,7 @@
 package com.example.wesleyreisz.todolist;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,6 +11,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.wesleyreisz.todolist.fragment.CreateFragment;
+import com.example.wesleyreisz.todolist.fragment.TaskListFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -16,9 +21,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //load toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //load list fragment
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragmentContainer, new TaskListFragment());
+        fragmentTransaction.commit();
+
+        //load floating actionbutton
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
