@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            //SystemClock.sleep(5000);
+            SystemClock.sleep(5000);
 
             return response;
         }
@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             textView.setText(result);
+            Toast toast = Toast.makeText(MainActivity.this,"Download Complete", Toast.LENGTH_SHORT);
+            toast.show();
         }
     }
 
