@@ -5,6 +5,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import com.example.wesleyreisz.todolist.R;
 import com.example.wesleyreisz.todolist.TasksAdapter;
 import com.example.wesleyreisz.todolist.model.Task;
 import com.parse.FindCallback;
+import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -44,6 +46,7 @@ public class TaskListFragment extends Fragment {
         adapter = new TasksAdapter(getActivity(),arrayOfTasks);
 
         ListView listView = (ListView)view.findViewById(R.id.lv_task);
+
         listView.setAdapter(adapter);
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Task");
@@ -54,7 +57,6 @@ public class TaskListFragment extends Fragment {
                     for (ParseObject tasks : taskList) {
 
                         Task task = new Task();
-
                         task.setTaskId(tasks.getObjectId());
                         task.setName(tasks.getString("name"));
 
@@ -62,7 +64,7 @@ public class TaskListFragment extends Fragment {
                         adapter.add(task);
                         adapter.notifyDataSetChanged();
 
-                        Log.d("Test", "Task Name: " + task.getName());
+                        Log.d("Item", "Item Name: " + task.getName());
                     }
                 } else {
                     Toast.makeText(getActivity(), "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
@@ -84,31 +86,40 @@ public class TaskListFragment extends Fragment {
             }
         });
 
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Task task = adapter.getItem(position);
+                ParseQuery<ParseObject> query = ParseQuery.getQuery("Task");
+                query.getInBackground(task.taskId, new GetCallback<ParseObject>() {
+                    public void done(ParseObject task, ParseException e) {
+                        if (e == null) {
+                            try {
+                                task.delete();
 
-        btnCreate = (Button) view.findViewById(R.id.btnCreate);
-        btnCreate.setOnClickListener(new View.OnClickListener() {
+                                //wait for delete then load fragment maanager
+                                FragmentManager fragmentManager = getFragmentManager();
+                                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                                fragmentTransaction.replace(R.id.fragmentContainer, new TaskListFragment());
+                                fragmentTransaction.commit();
+                            } catch (ParseException e1) {
+                                e1.printStackTrace();
+                            }
+                        } else {
+                            Toast.makeText(getActivity(),
+                                    "Something went wrong",
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
 
-            public void onClick(View arg) {
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragmentContainer, new CreateFragment());
-                fragmentTransaction.commit();
+                Snackbar.make(view, "Item Deleted", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null)
+                        .show();
+
+                return true;
             }
         });
-
-        /*
-        btnUpdate = (Button) view.findViewById(R.id.btnUpdate);
-        btnUpdate.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View arg) {
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragmentContainer, new UpdateFragment());
-                fragmentTransaction.commit();
-            }
-        });
-        */
-
         return view;
     }
 }
