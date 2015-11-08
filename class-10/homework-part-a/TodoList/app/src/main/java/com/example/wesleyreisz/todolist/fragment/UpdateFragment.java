@@ -27,7 +27,7 @@ public class UpdateFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_create, container, false);
+        View view = inflater.inflate(R.layout.fragment_update, container, false);
 
         btnBack = (Button) view.findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
