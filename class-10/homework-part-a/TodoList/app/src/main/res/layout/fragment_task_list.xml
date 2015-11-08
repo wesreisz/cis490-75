@@ -14,17 +14,10 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Detail Task"
-        android:id="@+id/btnUpdate"
-        android:layout_below="@+id/btnCreate"
-        android:layout_centerHorizontal="true" />
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/lv_task"
-        android:layout_below="@+id/btnUpdate"
+        android:layout_below="@+id/btnCreate"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

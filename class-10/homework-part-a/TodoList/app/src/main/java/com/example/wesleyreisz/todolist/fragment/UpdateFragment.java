@@ -17,11 +17,11 @@ import com.example.wesleyreisz.todolist.R;
  */
 public class UpdateFragment extends Fragment {
     private Button btnBack;
+    private String objectId;
 
     public UpdateFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,5 +43,11 @@ public class UpdateFragment extends Fragment {
         return view;
     }
 
+    public String getObjectId() {
+        return objectId;
+    }
 
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
+    }
 }
