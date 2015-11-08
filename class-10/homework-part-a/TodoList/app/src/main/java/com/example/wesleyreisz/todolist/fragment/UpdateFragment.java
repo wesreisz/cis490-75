@@ -17,7 +17,7 @@ import com.example.wesleyreisz.todolist.R;
  */
 public class UpdateFragment extends Fragment {
     private Button btnBack;
-    
+
     public UpdateFragment() {
         // Required empty public constructor
     }
