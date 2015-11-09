@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ContentProvider-SqlLite-Example.iml" filepath="$PROJECT_DIR$/ContentProvider-SqlLite-Example.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sqlite-example.iml" filepath="$PROJECT_DIR$/sqlite-example.iml" />
     </modules>
   </component>
 </project>

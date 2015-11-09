@@ -22,7 +22,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     }
 
     // Database creation sql statement
-    private static final String DATABASE_CREATE = "create table "
+    private static final String DATABASE_CREATE =
+            "create table "
             + TABLE_COMMENTS + "(" + COLUMN_ID
             + " integer primary key autoincrement, " + COLUMN_COMMENT
             + " text not null);";

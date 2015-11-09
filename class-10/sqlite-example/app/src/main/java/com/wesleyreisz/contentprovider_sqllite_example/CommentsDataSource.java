@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,46 +14,58 @@ import java.util.List;
  * Created by wesleyreisz on 11/8/15.
  */
 public class CommentsDataSource {
+    private static final String TAG = "COMMENTS-DATASOURCE";
     // Database fields
     private SQLiteDatabase database;
     private MySQLiteHelper dbHelper;
-    private String[] allColumns = { MySQLiteHelper.COLUMN_ID,
-            MySQLiteHelper.COLUMN_COMMENT };
+    private String[] allColumns = {
+        MySQLiteHelper.COLUMN_ID,
+        MySQLiteHelper.COLUMN_COMMENT
+    };
 
     public CommentsDataSource(Context context) {
         dbHelper = new MySQLiteHelper(context);
     }
 
-    public void open() throws SQLException {
+    private void open() throws SQLException {
         database = dbHelper.getWritableDatabase();
     }
 
-    public void close() {
+    private void close() {
         dbHelper.close();
     }
 
     public Comment createComment(String comment) {
+        open();
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.COLUMN_COMMENT, comment);
-        long insertId = database.insert(MySQLiteHelper.TABLE_COMMENTS, null,
-                values);
-        Cursor cursor = database.query(MySQLiteHelper.TABLE_COMMENTS,
-                allColumns, MySQLiteHelper.COLUMN_ID + " = " + insertId, null,
-                null, null, null);
+        long insertId = database.insert(MySQLiteHelper.TABLE_COMMENTS, null, values);
+        Cursor cursor = database.query(
+                MySQLiteHelper.TABLE_COMMENTS,
+                allColumns,
+                MySQLiteHelper.COLUMN_ID + " = " + insertId,
+                null, null, null, null);
+
+        Log.d(TAG,"Inserted Comment");
         cursor.moveToFirst();
         Comment newComment = cursorToComment(cursor);
         cursor.close();
+        close();
         return newComment;
     }
 
     public void deleteComment(Comment comment) {
+        open();
         long id = comment.getId();
-        System.out.println("Comment deleted with id: " + id);
+        Log.d(TAG,"Comment deleted with id: " + id);
         database.delete(MySQLiteHelper.TABLE_COMMENTS, MySQLiteHelper.COLUMN_ID
                 + " = " + id, null);
+        close();
     }
 
     public List<Comment> getAllComments() {
+        open();
+        Log.d(TAG,"Getting all Comments");
         List<Comment> comments = new ArrayList<Comment>();
 
         Cursor cursor = database.query(MySQLiteHelper.TABLE_COMMENTS,
@@ -66,6 +79,7 @@ public class CommentsDataSource {
         }
         // make sure to close the cursor
         cursor.close();
+        close();
         return comments;
     }
 
