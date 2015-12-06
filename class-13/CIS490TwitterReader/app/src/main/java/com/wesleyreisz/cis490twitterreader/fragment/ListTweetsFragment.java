@@ -1,4 +1,4 @@
-package com.wesleyreisz.cis490twitterreader;
+package com.wesleyreisz.cis490twitterreader.fragment;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -12,8 +12,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.wesleyreisz.cis490twitterreader.Config;
+import com.wesleyreisz.cis490twitterreader.R;
 import com.wesleyreisz.cis490twitterreader.model.Tweet;
 import com.wesleyreisz.cis490twitterreader.util.TwitterMapper;
+import com.wesleyreisz.cis490twitterreader.adapter.TweetAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,8 +32,8 @@ import twitter4j.conf.ConfigurationBuilder;
  * A placeholder fragment containing a simple view.
  */
 public class ListTweetsFragment extends Fragment {
-    List<String> tweets;
-    ArrayAdapter<String> adapter;
+    ArrayList<Tweet> tweets = new ArrayList<Tweet>();
+    TweetAdapter adapter;
 
     public ListTweetsFragment() {
     }
@@ -41,12 +44,11 @@ public class ListTweetsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list_tweets, container, false);
 
         ListView listView = (ListView)view.findViewById(R.id.listViewTweets);
-        tweets = new ArrayList<String>();
-        tweets.add("test");
-        adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,tweets);
+
+        adapter = new TweetAdapter(getActivity(),R.layout.item, tweets);
         listView.setAdapter(adapter);
 
-        new GetTweetAsyncTask(getActivity()).execute("from:wesreisz");
+        new GetTweetAsyncTask(getActivity()).execute("#qconsf");
 
         return view;
     }
@@ -96,7 +98,7 @@ public class ListTweetsFragment extends Fragment {
             super.onPostExecute(tweetList);
             tweets.clear();
             for(Tweet t:tweetList){
-                tweets.add(t.toString());
+                tweets.add(t);
             }
 
             adapter.notifyDataSetChanged();
