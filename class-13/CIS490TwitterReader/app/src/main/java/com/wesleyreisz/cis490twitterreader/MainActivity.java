@@ -3,6 +3,7 @@ package com.wesleyreisz.cis490twitterreader;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity  implements FragmentTaskComp
     SharedPreferences sharedPreferences;
     Button btnLogin;
     boolean status = false;
-
+    FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,31 +32,37 @@ public class MainActivity extends AppCompatActivity  implements FragmentTaskComp
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         // Enabling Strict Mode
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
         sharedPreferences = getSharedPreferences(Config.PREF_NAME,0);
         status = sharedPreferences.getBoolean(Config.KEY_TWITTER_LOGIN, false);
+
+        //only show Floating ActionButton if logged in
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        //hide the action button if not logged in
+        if (status) {
+            fab.show();
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+            });
+        }else{
+            fab.hide();
+        }
+
         if(status) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.fragmentContainer, new ListTweetsFragment());
             fragmentTransaction.commit();
         }else{
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.fragmentContainer, new NotLoggedInFragment());
-            fragmentTransaction.commit();
+            showNotLoggedIn();
         }
     }
 
@@ -76,6 +83,9 @@ public class MainActivity extends AppCompatActivity  implements FragmentTaskComp
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }else if (id == R.id.action_logout){
+            setStatusInSharedPreferences(false);
+            showNotLoggedIn();
         }
 
         return super.onOptionsItemSelected(item);
@@ -83,11 +93,32 @@ public class MainActivity extends AppCompatActivity  implements FragmentTaskComp
 
     @Override
     public void onTaskComplete(String str) {
-        status = true;
+        setStatusInSharedPreferences(true);
+        fab.show();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragmentContainer, new ListTweetsFragment());
         fragmentTransaction.commit();
+    }
+
+    private void setStatusInSharedPreferences(boolean value){
+        status = value;
+
+        sharedPreferences = getSharedPreferences(Config.PREF_NAME,0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(Config.KEY_TWITTER_LOGIN, value);
+        editor.commit();
+    }
+
+    private void showNotLoggedIn(){
+        fab.hide();
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragmentContainer, new NotLoggedInFragment());
+        fragmentTransaction.commit();
+
+
     }
 }
