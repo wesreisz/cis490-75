@@ -1,6 +1,8 @@
 package com.wesleyreisz.cis490twitterreader;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
@@ -10,10 +12,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import com.wesleyreisz.cis490twitterreader.fragment.ListTweetsFragment;
+import com.wesleyreisz.cis490twitterreader.fragment.NotLoggedInFragment;
+import com.wesleyreisz.cis490twitterreader.listener.FragmentTaskCompleteListener;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity  implements FragmentTaskCompleteListener {
+    SharedPreferences sharedPreferences;
+    Button btnLogin;
+    boolean status = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +40,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        // Enabling Strict Mode
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
-        fragmentTransaction.replace(R.id.fragmentContainer, new ListTweetsFragment());
-
-        fragmentTransaction.commit();
-
-
+        sharedPreferences = getSharedPreferences(Config.PREF_NAME,0);
+        status = sharedPreferences.getBoolean(Config.KEY_TWITTER_LOGIN, false);
+        if(status) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragmentContainer, new ListTweetsFragment());
+            fragmentTransaction.commit();
+        }else{
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragmentContainer, new NotLoggedInFragment());
+            fragmentTransaction.commit();
+        }
     }
 
     @Override
@@ -61,5 +79,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onTaskComplete(String str) {
+        status = true;
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragmentContainer, new ListTweetsFragment());
+        fragmentTransaction.commit();
     }
 }

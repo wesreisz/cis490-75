@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">CIS 490 Twitter Reader</string>
     <string name="action_settings">Settings</string>
+    <string name="login">Login</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

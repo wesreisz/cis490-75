@@ -9,4 +9,6 @@ public class Config {
     public static final String PREF_NAME = "userData";
     public static final String KEY_OAUTH_TOKEN = "19065571-fCNeAVcwQhK5uUJyZPf3OhKxTy9Qhu2UeilqNVUdk";
     public static final String KEY_OAUTH_SECRET = "LOhUna4ZAbjSfda91oTqvV9zgjKtnZSBgUSAtpQWHC6yd";
+    public static final String KEY_TWITTER_LOGIN = "is_twitter_loggedin";
+    public static final String KEY_CALLBACK_URL = "http://www.wesleyreisz.com";
 }
