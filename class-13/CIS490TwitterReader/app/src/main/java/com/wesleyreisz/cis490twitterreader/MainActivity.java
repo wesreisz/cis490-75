@@ -1,5 +1,6 @@
 package com.wesleyreisz.cis490twitterreader;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -15,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import com.wesleyreisz.cis490twitterreader.fragment.FriendsListFragment;
 import com.wesleyreisz.cis490twitterreader.fragment.ListTweetsFragment;
 import com.wesleyreisz.cis490twitterreader.fragment.NotLoggedInFragment;
 import com.wesleyreisz.cis490twitterreader.listener.FragmentTaskCompleteListener;
@@ -77,6 +79,9 @@ public class MainActivity extends AppCompatActivity  implements FragmentTaskComp
         }else if (id == R.id.action_logout){
             setStatusInSharedPreferences(false);
             showNotLoggedIn();
+        }else if (id == R.id.action_friends){
+            setStatusInSharedPreferences(false);
+            showFriends();
         }
 
         return super.onOptionsItemSelected(item);
@@ -116,7 +121,10 @@ public class MainActivity extends AppCompatActivity  implements FragmentTaskComp
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragmentContainer, new NotLoggedInFragment());
         fragmentTransaction.commit();
+    }
 
-
+    private void showFriends() {
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
     }
 }
