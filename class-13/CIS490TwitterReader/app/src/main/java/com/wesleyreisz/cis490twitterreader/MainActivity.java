@@ -36,13 +36,11 @@ public class MainActivity extends AppCompatActivity  implements FragmentTaskComp
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        sharedPreferences = getSharedPreferences(Config.PREF_NAME,0);
+        sharedPreferences = getSharedPreferences(Config.PREF_NAME, 0);
         status = sharedPreferences.getBoolean(Config.KEY_TWITTER_LOGIN, false);
 
-        //only show Floating ActionButton if logged in
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-
         //hide the action button if not logged in
+        fab = (FloatingActionButton) findViewById(R.id.fab);
         if (status) {
             fab.show();
             fab.setOnClickListener(new View.OnClickListener() {
@@ -52,16 +50,9 @@ public class MainActivity extends AppCompatActivity  implements FragmentTaskComp
                             .setAction("Action", null).show();
                 }
             });
+            showHome();
         }else{
             fab.hide();
-        }
-
-        if(status) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.fragmentContainer, new ListTweetsFragment());
-            fragmentTransaction.commit();
-        }else{
             showNotLoggedIn();
         }
     }
@@ -109,6 +100,13 @@ public class MainActivity extends AppCompatActivity  implements FragmentTaskComp
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(Config.KEY_TWITTER_LOGIN, value);
         editor.commit();
+    }
+
+    private void showHome(){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragmentContainer, new ListTweetsFragment());
+        fragmentTransaction.commit();
     }
 
     private void showNotLoggedIn(){
